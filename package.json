@@ -1,0 +1,28 @@
+{
+  "name": "stubble",
+  "version": "0.0.1",
+  "description": "A package for mocking and stubbing API endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amindunited/stubble-js.git"
+  },
+  "keywords": [
+    "Stub",
+    "Mock",
+    "API",
+    "Node",
+    "Express",
+    "Javascript",
+    "Server"
+  ],
+  "author": "Robin Buckley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amindunited/stubble-js/issues"
+  },
+  "homepage": "https://github.com/amindunited/stubble-js#readme"
+}

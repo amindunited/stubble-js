@@ -1,10 +1,11 @@
 const express = require('express');
+// const { state } = require('../state');
+
 /**
  * Cleanup old instances, and run the server
  */
-const startServer = (config) => {
+const startServer = (app, config) => {
   console.log('startServer');
-  const app = express();
 
   app.get('/my/path/abc', () => {
     console.log('abc path');
@@ -34,8 +35,8 @@ const startServer = (config) => {
 
   // await createRoutes();
 
-  server = app.listen(config.serverPort, () => {
-    console.log(`Example app listening on port ${config.serverPort}`)
+  server = app.listen(config['server-port'], () => {
+    console.log(`Example app listening on port ${config['server-port']}`)
   });
 
   return server;

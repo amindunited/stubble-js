@@ -1,9 +1,11 @@
 {
   "name": "My Config!",
-  "stub-directory": null,
-  "additional-stub-directories": [],
-  "staticDirectories": [ { "route": "/assets", "folderPath": "tests/assets/"} ],
+  "stub-directories": ["tests/example-stubs"],
+  "static-directories": [
+    { "route": "/assets", "folderPath": "tests/assets/"},
+    { "route": "/demo", "folderPath": "tests/test-app"}
+  ],
   "default-headers": [],
   "enable-compression": false,
-  "serverPort": 3200
+  "server-port": 3200
 }

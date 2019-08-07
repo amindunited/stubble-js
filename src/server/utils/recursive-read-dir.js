@@ -12,6 +12,7 @@ const path = require('path');
 const fileStat = require('./file-stat');
 const deepFlatten = require('./deep-flatten');
 const readDir = require('./read-directory');
+const exclude = require('./exclude');
 
 // const exclude = require('@amindunited/exclude');
 const ignores = ['.DS_Store', '.test.js'];
@@ -22,6 +23,9 @@ const recurse = (dirPath) => {
     .then((files) => {
       const promises = [];
       files.forEach((file) => {
+        if (ignores.indexOf(path.basename(file)) >= 0) {
+          return;
+        }
         // stat the file
         const filePath = dirPath + '/' + file;
         const filePromise = fileStat(filePath)

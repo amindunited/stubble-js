@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test App</title>
+  </head>
+  <body>
+    <h1>Test App</h1>
+    <script>
+
+        const socket = new WebSocket('ws://localhost:3200');
+    
+    
+        // Connection opened
+        socket.addEventListener('open', function (event) {
+          console.log('web socket open?');
+          socket.send('Hello Server!');
+          // socket.send({
+          //   'path': '/',
+          //   'payload': {
+          //     'headers': 'my new headers',
+              
+          //   }
+          // });
+        });
+    
+        socket.addEventListener('message', function (event) {
+          console.log('Message from server ', event.data);
+        });
+
+      </script>
+  </body>
+</html>

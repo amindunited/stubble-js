@@ -1,2 +1,2 @@
-import state from './server-state';
+const state = require('./server-state');
 module.exports = state;

@@ -1,5 +1,6 @@
-const request = () => {
-
+const request = (req, res, next) => {
+  console.log('request fn called');
+  res.send('{ data: "blah"}');
 }
 
 const response = () => {

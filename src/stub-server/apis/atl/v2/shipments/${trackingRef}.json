@@ -1,0 +1,6 @@
+{
+  "name": "Tracking Ref File",
+  "id": "Original",
+  "user_id": "dynamic id",
+  "tracking_id": "${trackingRef}"
+}
